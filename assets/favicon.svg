@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="100" fill="#FF9800"/>
   <path d="M160 144h192c17.67 0 32 14.33 32 32v16c0 17.67-14.33 32-32 32H160c-17.67 0-32-14.33-32-32v-16c0-17.67 14.33-32 32-32zm-16 80h224l24 200c1.33 11.05-7.33 20-18.44 20H138.44c-11.11 0-19.77-8.95-18.44-20l24-200z" fill="#FFFFFF"/>
   <path d="M176 224v160M256 224v160M336 224v160" stroke="#FFE0B2" stroke-width="20" stroke-linecap="round"/>
 </svg>
-=======
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="100" fill="#FF9800"/>
-  <path d="M160 144h192c17.67 0 32 14.33 32 32v16c0 17.67-14.33 32-32 32H160c-17.67 0-32-14.33-32-32v-16c0-17.67 14.33-32 32-32zm-16 80h224l24 200c1.33 11.05-7.33 20-18.44 20H138.44c-11.11 0-19.77-8.95-18.44-20l24-200z" fill="#FFFFFF"/>
-  <path d="M176 224v160M256 224v160M336 224v160" stroke="#FFE0B2" stroke-width="20" stroke-linecap="round"/>
-</svg>
->>>>>>> 1561ba5475c91169a3fbc30246faf27f06c0329e
