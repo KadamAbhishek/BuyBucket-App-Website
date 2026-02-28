@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support - Buy Bucket App</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-page {
+            padding: 6rem 0;
+            background-color: var(--white);
+            color: var(--text-color);
+            min-height: 80vh;
+        }
+
+        .contact-page .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-page h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .contact-page p.desc {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        [data-theme="dark"] .form-control {
+            border-color: #444;
+            background-color: #1a1a1a;
+        }
+
+        [data-theme="dark"] .form-control:focus {
+            border-color: var(--primary-color);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .status-message.success {
+            display: block;
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+
+        .status-message.error {
+            display: block;
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+        }
+
+        [data-theme="dark"] .status-message.success {
+            background-color: rgba(46, 125, 50, 0.2);
+            color: #81c784;
+            border-color: rgba(129, 199, 132, 0.3);
+        }
+
+        [data-theme="dark"] .status-message.error {
+            background-color: rgba(198, 40, 40, 0.2);
+            color: #e57373;
+            border-color: rgba(229, 115, 115, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Buy Bucket App" class="logo-img">
+                Buy Bucket App
+            </a>
+
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#preview">App Preview</a>
+                <a href="index.html#changelog">What's New</a>
+                <a href="index.html#download" class="btn btn-primary">Download Now</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="contact-page">
+        <div class="container">
+            <h1>Contact Support</h1>
+            <p class="desc">Have an issue, suggestion, or general inquiry? Fill out the form below and we'll get back to
+                you.</p>
+
+            <form name="support-form" id="support-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required
+                        placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">What is this regarding?</label>
+                    <select id="type" name="type" class="form-control" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="App Issue">App Issue / Bug</option>
+                        <option value="Feature Suggestion">Feature Suggestion</option>
+                        <option value="General">General Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="platform">Which platform are you using?</label>
+                    <select id="platform" name="platform" class="form-control" required>
+                        <option value="Android" selected>Android</option>
+                        <option value="iOS" disabled>iOS (Not Available Yet)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required
+                        placeholder="Brief summary">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Detailed Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required
+                        placeholder="Please provide as much detail as possible..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+
+                <div id="statusMessage" class="status-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>Buy Bucket App</h3>
+                <p>Smart Shopping, Simplified.</p>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact-support.html">Contact Support</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Buy Bucket App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Replace with your actual Google Web App URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzukiI-IeehHIAkx5WjpP1R9zYdrhKfIeQ-kOPhWsXkdEmwc4y9lywqYYKkE-OhDl9s/exec';
+        const form = document.forms['support-form'];
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Update UI to show loading state
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+            statusMessage.className = 'status-message'; // Reset classes
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response);
+
+                    // Show success message
+                    statusMessage.innerText = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
+                    statusMessage.classList.add('success');
+
+                    // Reset form and UI
+                    form.reset();
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+
+                    // Hide message after 8 seconds
+                    setTimeout(() => {
+                        statusMessage.classList.remove('success');
+                    }, 8000);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+
+                    // Show error message
+                    statusMessage.innerText = 'Oops! Something went wrong while sending your message. Please try again later.';
+                    statusMessage.classList.add('error');
+
+                    // Reset UI
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+
+</html>
