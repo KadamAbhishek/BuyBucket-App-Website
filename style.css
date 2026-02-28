@@ -1109,7 +1109,8 @@ footer {
 }
 
 .social-links {
-    display: flex;
+    display: none;
+    /* Hidden for now */
     gap: 1rem;
 }
 
