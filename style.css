@@ -752,7 +752,7 @@ img {
 
 .timeline {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 3rem auto;
 }
 
@@ -768,7 +768,7 @@ img {
 }
 
 .timeline-item {
-    padding: 10px 50px;
+    padding: 10px 30px;
     position: relative;
     background-color: inherit;
     width: 50%;
