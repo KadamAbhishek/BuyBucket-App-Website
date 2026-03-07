@@ -79,7 +79,7 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <img src="assets/logo.png" alt="Buy Bucket App Logo" class="logo-img">
-                <span>Buy Bucket App</span>
+                <span>BuyBucket</span>
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
@@ -101,7 +101,7 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <h1>Simplify Your Shopping. <span class="highlight">Streamline Your Life.</span></h1>
-                <p>Experience the ultimate shopping list management with Buy Bucket App. Multiple lists, smart
+                <p>Experience the ultimate shopping list management with BuyBucket. Multiple lists, smart
                     completion workflows, and enhanced sharing options.</p>
                 <div class="hero-btns">
                     <a href="#download" class="btn btn-primary"><i class="fa-brands fa-google-play"></i> Get it on Play
@@ -109,7 +109,7 @@
                     <a href="#features" class="btn btn-secondary">Explore Features</a>
                 </div>
                 <div class="hero-badges">
-                    <span class="badge"><i class="fa-solid fa-check-circle"></i> V1.7.0 Released</span>
+                    <span class="badge"><i class="fa-solid fa-check-circle"></i> V1.7.1 Released</span>
                     <span class="badge"><i class="fa-solid fa-star"></i> Smart Tracking</span>
                 </div>
             </div>
@@ -118,9 +118,9 @@
                 <div class="app-mockup">
                     <div class="mockup-screen">
                         <div class="mockup-content">
-                            <img src="assets/logo.gif" alt="Buy Bucket App Animation"
+                            <img src="assets/logo.gif" alt="BuyBucket Animation"
                                 style="width: 80px; margin-bottom: 5px;">
-                            <h3>Buy Bucket App</h3>
+                            <h3>BuyBucket</h3>
                             <p>Your smart shopping companion</p>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>🚀 What You Can Do with Buy Bucket App</h2>
+                <h2>🚀 What You Can Do with <span class="highlight-text">BuyBucket</span></h2>
                 <div class="divider"></div>
             </div>
 
@@ -237,7 +237,7 @@
     <section id="preview" class="preview">
         <div class="container">
             <div class="section-header">
-                <h2>See <span class="highlight-text"></span>Buy Bucket App</span> in Action</h2>
+                <h2>See <span class="highlight-text">BuyBucket</span> in Action</h2>
                 <div class="divider"></div>
             </div>
 
@@ -279,15 +279,129 @@
                 <!-- Dots if needed later, but arrows are primary nav now -->
             </div>
 
-            <!-- Demo Video Section -->
-            <div class="demo-video-container" style="text-align: center; margin-top: 4rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--text-color);">Watch Demo Video</h3>
-                <div class="video-wrapper">
-                    <!-- Replace with your actual video embed URL -->
-                    <iframe src="https://www.youtube.com/embed/DoSX1Ldl0Hc" title="Demo Video" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Interactive Tutorials Section -->
+            <div class="demo-section-container" style="margin-top: 6rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 2.2rem; margin-bottom: 3rem; color: var(--text-color); text-align: center;">
+                    Interactive <span class="highlight-text">Tutorials</span></h3>
+
+                <div class="demo-grid">
+                    <!-- Left: 1 Vertical Video Player -->
+                    <div class="demo-videos-container">
+                        <div class="vertical-video-wrapper">
+                            <video id="demo-video-player" controls autoplay muted>
+                                <source src="assets/demo1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div id="video-error-message" class="video-error-overlay" style="display: none;">
+                                <i class="fa-solid fa-video-slash"
+                                    style="font-size: 3rem; margin-bottom: 1rem; color: #ffd54f;"></i>
+                                <p
+                                    style="font-size: 1.1rem; line-height: 1.5; font-family: 'Outfit', sans-serif; margin: 0;">
+                                    Video tutorial is uploading soon!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: More Videos Scrollable List -->
+                    <div class="demo-playlist">
+                        <h3 class="playlist-title">Tutorial List</h3>
+
+                        <div class="playlist-items-wrapper">
+                            <div class="playlist-item active" data-video-src="assets/demo1.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>1. Stop Forgetting What to Buy: Meet Buy Bucket App 🛒</h4>
+                                    <p>Learn how to easily add, prioritize, and track your shopping Wishlist with the
+                                        Buy Bucket App. Keep your spending goals organized in one place!</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo2.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>2. Never Let Food Expire Again! 🥦⏳</h4>
+                                    <p>Say goodbye to food waste. Discover how Buy Bucket’s Smart Pantry Tracker uses
+                                        color-coded alerts to warn you before your groceries go bad.</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo3.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>3. The Ultimate Grocery List Hack 📝✨</h4>
+                                    <p>Manage complex shopping trips, track your total spending, and instantly share
+                                        formatted lists to WhatsApp with a single tap.</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo4.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>4. Track Your Spending & Stay on Budget 💸📊</h4>
+                                    <p>See exactly where your money is going. Explore Buy Bucket's visual dashboard and
+                                        time-traveling analytics.</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo5.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>5. Search Amazon & Flipkart in One Tap 🛍️📲</h4>
+                                    <p>Skip the typing. Learn how Buy Bucket seamlessly connects your pending items
+                                        directly to your favourite shopping apps.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const videoPlayer = document.getElementById('demo-video-player');
+                        const playlistItems = document.querySelectorAll('.playlist-item');
+                        const errorMessage = document.getElementById('video-error-message');
+
+                        // Function to handle video errors (e.g. file not found)
+                        function handleVideoError() {
+                            videoPlayer.style.display = 'none';
+                            errorMessage.style.display = 'flex';
+                        }
+
+                        function resetVideoState() {
+                            videoPlayer.style.display = 'block';
+                            errorMessage.style.display = 'none';
+                        }
+
+                        // Listen directly on the video element for error events
+                        videoPlayer.addEventListener('error', handleVideoError, true);
+                        const sourceEl = videoPlayer.querySelector('source');
+                        if (sourceEl) sourceEl.addEventListener('error', handleVideoError);
+
+                        playlistItems.forEach(item => {
+                            item.addEventListener('click', function () {
+                                // Remove active class from all
+                                playlistItems.forEach(el => el.classList.remove('active'));
+
+                                // Add active class to clicked item
+                                this.classList.add('active');
+
+                                // Update video source and reset error state before playing
+                                resetVideoState();
+                                const newSrc = this.getAttribute('data-video-src');
+                                videoPlayer.src = newSrc;
+                                videoPlayer.load();
+
+                                videoPlayer.play().catch(e => {
+                                    console.log('Autoplay prevented or video not found:', e);
+                                    // Some browsers throw a promise rejection on 404 instead of an error event
+                                    if (e.name === 'NotSupportedError') {
+                                        handleVideoError();
+                                    }
+                                });
+                            });
+                        });
+                    });
+                </script>
             </div>
         </div>
     </section>
@@ -301,11 +415,33 @@
             </div>
 
             <div class="timeline">
+                <!-- Version 1.7.1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Mar 2026</div>
+                    <div class="timeline-content">
+                        <details open>
+                            <summary>
+                                <h3>Version 1.7.1</h3>
+                                <span class="version-date">Released: Mar 07, 2026</span>
+                            </summary>
+                            <div class="version-summary">
+                                🚀 Security & Performance Update
+                            </div>
+                            <div class="version-details">
+                                <h4>🛠 Under the Hood:</h4>
+                                <p>Enhanced app security and data protection optimizations (upgraded native code
+                                    shrinking and obfuscation) to keep your lists safe and the app running blazingly
+                                    fast.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
                 <!-- Version 1.7.0 -->
                 <div class="timeline-item">
                     <div class="timeline-date">Feb 2026</div>
                     <div class="timeline-content">
-                        <details open>
+                        <details>
                             <summary>
                                 <h3>Version 1.7.0</h3>
                                 <span class="version-date">Released: Feb 28, 2026</span>
@@ -396,13 +532,13 @@
                                 <span class="version-date">Released: Jan 24, 2026</span>
                             </summary>
                             <div class="version-summary">
-                                🚀 Introducing Multi-List Management & Glossaries
+                                🚀 Introducing Multi-List Management & Groceries
                             </div>
                             <div class="version-details">
                                 <h4>✨ New Features</h4>
                                 <ul>
                                     <li><strong>Multiple Shopping Lists:</strong> Create separate lists like "Feb 2026
-                                        Glossary" or "Weekly Veggies".</li>
+                                        Groceries" or "Weekly Veggies".</li>
                                     <li><strong>List Dashboard:</strong> View all lists with progress summaries and
                                         completion status.</li>
                                     <li><strong>Smart Completion:</strong> Mark lists as completed, recording Total Paid
@@ -610,7 +746,7 @@
         <div class="container">
             <div class="cta-box">
                 <h2>Ready to Get Organized?</h2>
-                <p>Download Buy Bucket App today and take control of your shopping!</p>
+                <p>Download BuyBucket App today and take control of your shopping!</p>
                 <div class="download-buttons">
                     <a href="javascript:void(0)" class="store-btn disabled" style="pointer-events: none;"
                         aria-disabled="true">
@@ -638,8 +774,8 @@
     <footer>
         <div class="container footer-container">
             <div class="footer-brand">
-                <h3>Buy Bucket App</h3>
-                <p>Smart Shopping, Simplified.</p>
+                <h3>BuyBucket</h3>
+                <p>Your smart shopping companion</p>
             </div>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
@@ -653,7 +789,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 Buy Bucket App. All rights reserved.</p>
+            <p>&copy; 2026 BuyBucket. All rights reserved.</p>
         </div>
     </footer>
 
