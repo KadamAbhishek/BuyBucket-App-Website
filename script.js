@@ -129,9 +129,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // Using standard naming: screen_1.jpg ... screen_14.jpg
         // Provide placeholders if files don't exist yet
 
+        const screenshotTitles = [
+            "Smart Dashboard",
+            "Inventory - Bucket Items",
+            "Bucket Items - Slidable Action",
+            "Add New Item",
+            "Smart Suggestion",
+            "App Settings",
+            "Spending Analytics - Bucket Items",
+            "In-App Reminders",
+            "Groceries",
+            "Add New Grocery List",
+            "Spending Analytics - Groceries",
+            "Inventory - Pantry",
+            "Settings - Categories",
+            "App version update"
+        ]
+
         function createItem(index) {
             const div = document.createElement('div');
             div.className = 'carousel-item';
+
+            const contentWrapper = document.createElement('div');
+            contentWrapper.className = 'screenshot-wrapper';
+
             const img = document.createElement('img');
             img.className = 'carousel-screenshot';
             // Store theme paths
@@ -144,13 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             img.src = isDark ? img.dataset.dark : img.dataset.light;
 
-            // Fallback for missing images (handled by onerror if needed, but we assume assets exist)
-            img.onerror = function () {
-                // this.style.display='none'; // Hide if missing? Or show placeholder
-                // For dev, let's keep it visible so user knows to add file
-            };
+            // Fallback for missing images
+            img.onerror = function () { };
 
-            div.appendChild(img);
+            contentWrapper.appendChild(img);
+
+            // Add title element
+            const title = document.createElement('h4');
+            title.className = 'screenshot-title';
+            title.textContent = screenshotTitles[index - 1] || `Screenshot ${index}`;
+            contentWrapper.appendChild(title);
+
+            div.appendChild(contentWrapper);
             return div;
         }
 

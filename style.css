@@ -766,10 +766,6 @@ img {
     width: 250px;
     /* Base width */
     position: relative;
-    border-radius: 16px;
-    /* overflow: hidden; <-- Keep this for image corner radius */
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     transform-origin: center center;
 }
@@ -778,7 +774,6 @@ img {
     transform: scale(1.05);
     /* Zoom in */
     z-index: 20;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-screenshot {
@@ -788,6 +783,31 @@ img {
     border: 3px solid #333;
     /* Phone border */
     border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.carousel-item:hover .carousel-screenshot {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.screenshot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.screenshot-title {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+[data-theme="dark"] .screenshot-title {
+    color: #e0e0e0;
 }
 
 /* Responsive Sizing Calculation */
