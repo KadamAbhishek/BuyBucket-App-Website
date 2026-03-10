@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation & Feature Guide - BuyBucket App</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .documentation {
+            padding: 6rem 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .documentation .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 3rem 4rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .documentation h1 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .documentation .intro {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .documentation h2 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+
+        [data-theme="dark"] .documentation h2 {
+            border-bottom-color: #333;
+        }
+
+        .documentation p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-light);
+        }
+
+        .documentation ul {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .documentation li {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .documentation li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            top: -5px;
+        }
+
+        .documentation strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .doc-screenshot-wrapper {
+            margin: 2rem 0 3rem 0;
+            text-align: center;
+        }
+
+        .doc-screenshot {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 4px solid #3f3f46;
+            /* Darker silver mobile frame */
+            background-color: #f85723;
+        }
+
+        [data-theme="dark"] .doc-screenshot {
+            border-color: #3f3f46;
+            /* Dark mode mobile frame */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            background-color: #121212;
+        }
+
+        [data-theme="light"] .doc-screenshot.dark-mode-img {
+            display: none;
+        }
+
+        [data-theme="dark"] .doc-screenshot.light-mode-img {
+            display: none;
+        }
+
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 2rem;
+        }
+
+        .feature-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-image {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+        }
+
+        .feature-image .doc-screenshot-wrapper {
+            margin: 0;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        [data-theme="dark"] .cta-container {
+            border-top-color: #333;
+        }
+
+        .cta-container h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .feature-row,
+            .feature-row.reverse {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .documentation .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .documentation h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Buy Bucket App Logo" class="logo-img">
+                <span>BuyBucket</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#preview">Preview</a>
+                <a href="index.html#changelog">Updates</a>
+                <a href="documentation.html">Docs</a>
+                <a href="index.html#download" class="btn btn-primary">Download App</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Content -->
+    <section class="documentation">
+        <div class="container">
+            <h1>🛒 BuyBucket: Complete Feature Guide</h1>
+            <p class="intro">Welcome to BuyBucket — your all-in-one smart shopping list, budget tracker, and pantry
+                manager. Whether you are tracking daily groceries, planning a massive trekking trip, or keeping an eye
+                on your monthly spending, BuyBucket is designed to keep you organized.</p>
+
+            <p style="text-align: center; color: var(--text-color); font-weight: 500;">Below is a complete guide to
+                everything BuyBucket can do to make your shopping experience seamless.</p>
+
+            <h2>📝 1. Smart Inventory Management</h2>
+            <div class="feature-row">
+                <div class="feature-text">
+                    <p>Never forget an item again. BuyBucket keeps your wishlist organized and prioritizes what you need
+                        to buy
+                        first.</p>
+                    <ul>
+                        <li><strong>Add Detailed Items:</strong> Add items with specific details including Name,
+                            Category,
+                            Priority (High, Medium, Low), Expected Buy Date, and Estimated Price.</li>
+                        <li><strong>Pending vs. Purchased:</strong> Items live in your "Pending" list until you buy
+                            them. Once
+                            purchased, simply tap "Mark Bought," enter the actual price paid, and it moves to your
+                            "Purchased"
+                            history.</li>
+                        <li><strong>Smart Sorting:</strong> BuyBucket automatically sorts your "Pending" list to show
+                            the items
+                            you need to buy soonest right at the top. Your "Purchased" list is sorted to show your most
+                            recent
+                            buys first.</li>
+                        <li><strong>Custom Categories:</strong> Organize items your way. Create custom categories (e.g.,
+                            "Camping Gear," "Office Supplies") to group your items perfectly.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <!-- Replace src with an actual wide screenshot or mock up image -->
+                        <img src="assets/screenshots/light/screen_1.jpg"
+                            alt="Smart Inventory Management Screenshot (Light)" class="doc-screenshot light-mode-img"
+                            style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/screenshots/dark/screen_1.jpg"
+                            alt="Smart Inventory Management Screenshot (Dark)" class="doc-screenshot dark-mode-img"
+                            style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <h2>📊 2. Financial Dashboard & Analytics</h2>
+            <div class="feature-row reverse">
+                <div class="feature-text">
+                    <p>Take total control of your budget. BuyBucket gives you real-time insights into exactly where your
+                        money
+                        is going.</p>
+                    <ul>
+                        <li><strong>Dual-Layer Budget Tracking:</strong> The Dashboard features an intuitive progress
+                            bar. The
+                            solid green bar shows what you have actually spent, while the lighter background bar
+                            projects your
+                            expected spending. You will always know if you are safely within budget or projected to
+                            overspend.
+                        </li>
+                        <li><strong>Separate Grocery & Item Budgets:</strong> Track your recurring grocery bills
+                            completely
+                            separate from your individual bucket list items.</li>
+                        <li><strong>Visual Analytics:</strong> Tap on any budget card to dive into the Spending Report.
+                            View
+                            beautiful Pie Charts that break down your spending by category.</li>
+                        <li><strong>Time-Travel History:</strong> Use the Month Navigator to look back up to 6 months
+                            into the
+                            past and compare your spending habits over time.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <img src="assets/screenshots/light/screen_7.jpg" alt="Financial Dashboard Screenshot (Light)"
+                            class="doc-screenshot light-mode-img" style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/screenshots/dark/screen_7.jpg" alt="Financial Dashboard Screenshot (Dark)"
+                            class="doc-screenshot dark-mode-img" style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <h2>🥦 3. Smart Pantry Tracker</h2>
+            <div class="feature-row">
+                <div class="feature-text">
+                    <p>Stop throwing away expired food. The Smart Pantry tracks your perishable goods and alerts you
+                        before they
+                        go bad.</p>
+                    <ul>
+                        <li><strong>Seamless Transfer:</strong> When you buy groceries, toggle "Send to Pantry" and
+                            assign an
+                            expiry date.</li>
+                        <li><strong>Color-Coded Alerts:</strong><br>
+                            <strong>🟢 Teal (Safe):</strong> Plenty of time left.<br>
+                            <strong>🟠 Orange (Expiring Soon):</strong> Expires in less than 3 days.<br>
+                            <strong>🔴 Red (Expired):</strong> The item has passed its expiry date.
+                        </li>
+                        <li><strong>Quick Consume:</strong> Used it up? Simply swipe right on the item in your Pantry
+                            tab and
+                            tap "Consume" to clear it from your inventory.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <img src="assets/screenshots/light/screen_12.jpg" alt="Smart Pantry Tracker Screenshot (Light)"
+                            class="doc-screenshot light-mode-img" style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/screenshots/dark/screen_12.jpg" alt="Smart Pantry Tracker Screenshot (Dark)"
+                            class="doc-screenshot dark-mode-img" style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <h2>📋 4. Multi-List (Groceries) Management</h2>
+            <div class="feature-row reverse">
+                <div class="feature-text">
+                    <p>Planning a weekend trip or a monthly grocery haul? Create custom lists to manage bulk purchases.
+                    </p>
+                    <ul>
+                        <li><strong>Checklists on the Go:</strong> Create dedicated lists (e.g., "March Groceries" or
+                            "Party
+                            Supplies"). Check items off as you walk through the store aisles.</li>
+                        <li><strong>Log Total Bills:</strong> Once a list is fully checked off, hit "Complete List" and
+                            log the
+                            total receipt amount to instantly update your dashboard budget.</li>
+                        <li><strong>Duplicate Lists:</strong> Buying the same things next month? Swipe and tap
+                            "Duplicate" to
+                            instantly recreate your old list and start fresh.</li>
+                        <li><strong>One-Tap WhatsApp Sharing:</strong> Tap the share icon to instantly generate a
+                            cleanly
+                            formatted, numbered text list and send it to your family or friends via WhatsApp, Email, or
+                            SMS.
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <img src="assets/screenshots/light/screen_9.jpg" alt="Multi-List Management Screenshot (Light)"
+                            class="doc-screenshot light-mode-img" style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/screenshots/dark/screen_9.jpg" alt="Multi-List Management Screenshot (Dark)"
+                            class="doc-screenshot dark-mode-img" style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <h2>🛍️ 5. One-Tap Online Shopping</h2>
+            <div class="feature-row">
+                <div class="feature-text">
+                    <p>Found something you want to buy, but want to check prices online first?</p>
+                    <ul>
+                        <li><strong>Direct Integrations:</strong> Open any pending item and tap the branded Amazon or
+                            Flipkart
+                            buttons.</li>
+                        <li><strong>Skip the Typing:</strong> BuyBucket will instantly open the respective shopping app
+                            on your
+                            phone and automatically search for the exact name of your item. Find it, buy it, and check
+                            it off!
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <img src="assets/docs-shopping-light.jpg" alt="One-Tap Online Shopping Screenshot (Light)"
+                            class="doc-screenshot light-mode-img" style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/docs-shopping-dark.jpg" alt="One-Tap Online Shopping Screenshot (Dark)"
+                            class="doc-screenshot dark-mode-img" style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <h2>☁️ 6. Secure Data Backup & Restore</h2>
+            <div class="feature-row reverse">
+                <div class="feature-text">
+                    <p>Your data is yours. Keep your shopping history, pantry items, and budgets safely backed up.</p>
+                    <ul>
+                        <li><strong>Google Drive Sync:</strong> Securely link your Google account to backup all your
+                            data to the
+                            cloud. Restore it instantly if you get a new phone or reinstall the app.</li>
+                        <li><strong>Local Device Export:</strong> Prefer to keep things offline? Generate a .json backup
+                            file
+                            directly to your phone's local storage. You can easily share this file via Email or Drive,
+                            and
+                            import it later.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <img src="assets/screenshots/light/screen_14.jpg" alt="Secure Data Backup Screenshot (Light)"
+                            class="doc-screenshot light-mode-img" style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/screenshots/dark/screen_14.jpg" alt="Secure Data Backup Screenshot (Dark)"
+                            class="doc-screenshot dark-mode-img" style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <h2>⚙️ 7. Customization & App Preferences</h2>
+            <div class="feature-row">
+                <div class="feature-text">
+                    <p>Make BuyBucket feel like your app.</p>
+                    <ul>
+                        <li><strong>In-App Reminders:</strong> Set a specific time (e.g., 9:00 AM) to receive daily push
+                            notifications reminding you of items due today or pantry foods expiring soon.</li>
+                        <li><strong>Global Currency Support:</strong> Choose your preferred default currency (₹, $, €,
+                            £, ¥)
+                            from the settings, and all your dashboard metrics will update instantly.</li>
+                        <li><strong>App Themes:</strong> Seamlessly switch between Light Theme, Dark Theme, or simply
+                            follow
+                            your device's System Default.</li>
+                        <li><strong>Over-The-Air Updates:</strong> BuyBucket features a smart internal update checker.
+                            Whenever
+                            a new version is released with bug fixes or features, a prompt will appear letting you
+                            download the
+                            latest update directly from the official website.</li>
+                    </ul>
+                </div>
+                <div class="feature-image">
+                    <div class="doc-screenshot-wrapper">
+                        <img src="assets/screenshots/light/screen_6.jpg"
+                            alt="Customization & Settings Screenshot (Light)" class="doc-screenshot light-mode-img"
+                            style="max-height: 400px; object-fit: contain;">
+                        <img src="assets/screenshots/dark/screen_6.jpg" alt="Customization & Settings Screenshot (Dark)"
+                            class="doc-screenshot dark-mode-img" style="max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <h3>Ready to simplify your shopping?</h3>
+                <p>Download BuyBucket today and take the stress out of managing your wishlist, your groceries, and your
+                    budget!</p>
+                <div class="download-buttons" style="justify-content: center; margin-top: 25px;">
+                    <a href="javascript:void(0)" class="store-btn disabled" style="pointer-events: none;"
+                        aria-disabled="true">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div class="btn-text">
+                            <small>Coming Soon to</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="assets/BuyBucket.apk" download="BuyBucket.apk" class="store-btn primary"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-android"></i>
+                        <div class="btn-text">
+                            <small>Get Early Access</small>
+                            <span>Download APK</span>
+                        </div>
+                    </a>
+                </div>
+                <p class="note" style="margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">* App is
+                    currently under review on Play Store. Stay tuned!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>BuyBucket</h3>
+                <p>Your smart shopping companion</p>
+            </div>
+            <div class="footer-links">
+                <a href="documentation.html">Feature Guide</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact-support.html">Contact Support</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 BuyBucket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

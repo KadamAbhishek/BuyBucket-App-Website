@@ -118,6 +118,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -1220,6 +1221,26 @@ details[open] summary::after {
     color: var(--primary-color);
 }
 
+.store-btn.primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+    color: var(--white);
+    border: 2px solid transparent;
+}
+
+.store-btn.primary .btn-text small {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.store-btn.primary .btn-text span,
+.store-btn.primary i {
+    color: var(--white);
+}
+
+.store-btn.primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 152, 0, 0.4);
+}
+
 
 .store-btn.disabled {
     opacity: 0.9;
@@ -1237,6 +1258,16 @@ details[open] summary::after {
 .store-btn.disabled:hover {
     transform: none;
     box-shadow: none;
+}
+
+[data-theme="dark"] .store-btn.disabled {
+    background-color: #2c2c2c;
+}
+
+[data-theme="dark"] .store-btn.disabled .btn-text span,
+[data-theme="dark"] .store-btn.disabled i,
+[data-theme="dark"] .store-btn.disabled .btn-text small {
+    color: #666;
 }
 
 /* Footer */
