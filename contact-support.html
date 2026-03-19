@@ -193,6 +193,7 @@
                     <label for="type">What is this regarding?</label>
                     <select id="type" name="type" class="form-control" required>
                         <option value="" disabled selected>Select an option</option>
+                        <option value="Request Early Access">Request Early Access</option>
                         <option value="App Issue">App Issue / Bug</option>
                         <option value="Feature Suggestion">Feature Suggestion</option>
                         <option value="General">General Inquiry</option>
@@ -296,6 +297,23 @@
                     submitBtn.innerText = originalBtnText;
                     submitBtn.disabled = false;
                 });
+        });
+
+        // Auto-select "Request Early Access" if reason is passed in URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('reason') === 'request_early_access') {
+                const typeSelect = document.getElementById('type');
+                if (typeSelect) {
+                    typeSelect.value = 'Request Early Access';
+                    
+                    // Smooth scroll to form section
+                    const formSection = document.querySelector('.contact-section');
+                    if (formSection) {
+                        formSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
         });
     </script>
 </body>
