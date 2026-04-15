@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tutorials - BuyBucket App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tutorials-page {
+            padding: 6rem 0;
+            background-color: var(--bg-color);
+            min-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Buy Bucket App Logo" class="logo-img">
+                <span>BuyBucket</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#preview">Preview</a>
+                <a href="index.html#changelog">Updates</a>
+                <a href="documentation.html">Docs</a>
+                <a href="tutorials.html">Tutorials</a>
+                <a href="contact-support.html?reason=request_early_access" class="btn btn-primary">Download App</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tutorials Content -->
+    <section class="tutorials-page">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive <span class="highlight-text">Tutorials</span></h2>
+                <div class="divider"></div>
+            </div>
+            
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; font-size: 1.15rem;">
+                Learn how to master BuyBucket with our step-by-step interactive video tutorials.
+            </p>
+
+            <div class="demo-section-container">
+                <div class="demo-grid">
+                    <!-- Left: 1 Vertical Video Player -->
+                    <div class="demo-videos-container">
+                        <div class="vertical-video-wrapper">
+                            <video id="demo-video-player" controls>
+                                <source src="assets/demo1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div id="video-error-message" class="video-error-overlay" style="display: none;">
+                                <i class="fa-solid fa-video-slash" style="font-size: 3rem; margin-bottom: 1rem; color: #ffd54f;"></i>
+                                <p style="font-size: 1.1rem; line-height: 1.5; font-family: 'Outfit', sans-serif; margin: 0;">
+                                    Video tutorial is uploading soon!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: More Videos Scrollable List -->
+                    <div class="demo-playlist">
+                        <h3 class="playlist-title">Tutorial List</h3>
+
+                        <div class="playlist-items-wrapper">
+                            <div class="playlist-item active" data-video-src="assets/demo1.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>1. Stop Forgetting What to Buy: Meet Buy Bucket App 🛒</h4>
+                                    <p>Learn how to easily add, prioritize, and track your shopping Wishlist with the Buy Bucket App. Keep your spending goals organized in one place!</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo2.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>2. Never Let An Item Expire Again! 🥦⏳</h4>
+                                    <p>Say goodbye to item waste. Discover how BuyBucket’s Smart Pantry Tracker uses color-coded alerts to warn you before your items gets expire.</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo3.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>3. The Ultimate Grocery List Hack 📝✨</h4>
+                                    <p>Manage complex shopping trips, track your total spending, and instantly share formatted lists to WhatsApp with a single tap.</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo4.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>4. Track Your Spending & Stay on Budget 💸📊</h4>
+                                    <p>See exactly where your money is going. Explore Buy Bucket's visual dashboard and time-traveling analytics.</p>
+                                </div>
+                            </div>
+
+                            <div class="playlist-item" data-video-src="assets/demo5.mp4">
+                                <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                                <div class="playlist-info">
+                                    <h4>5. Search Amazon & Flipkart in One Tap 🛍️📲</h4>
+                                    <p>Skip the typing. Learn how Buy Bucket seamlessly connects your pending items directly to your favourite shopping apps.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const videoPlayer = document.getElementById('demo-video-player');
+                        const playlistItems = document.querySelectorAll('.playlist-item');
+                        const errorMessage = document.getElementById('video-error-message');
+
+                        function handleVideoError() {
+                            videoPlayer.style.display = 'none';
+                            errorMessage.style.display = 'flex';
+                        }
+
+                        function resetVideoState() {
+                            videoPlayer.style.display = 'block';
+                            errorMessage.style.display = 'none';
+                        }
+
+                        videoPlayer.addEventListener('error', handleVideoError, true);
+                        const sourceEl = videoPlayer.querySelector('source');
+                        if (sourceEl) sourceEl.addEventListener('error', handleVideoError);
+
+                        playlistItems.forEach(item => {
+                            item.addEventListener('click', function () {
+                                playlistItems.forEach(el => el.classList.remove('active'));
+                                this.classList.add('active');
+
+                                resetVideoState();
+                                const newSrc = this.getAttribute('data-video-src');
+                                videoPlayer.src = newSrc;
+                                videoPlayer.load();
+
+                                videoPlayer.play().catch(e => {
+                                    console.log('Autoplay prevented or video not found:', e);
+                                    if (e.name === 'NotSupportedError') {
+                                        handleVideoError();
+                                    }
+                                });
+                            });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <h3>BuyBucket</h3>
+                <p>Your smart shopping companion</p>
+            </div>
+            <div class="footer-links">
+                <a href="documentation.html">Feature Guide</a>
+                <a href="tutorials.html">Tutorials</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="contact-support.html">Contact Support</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 BuyBucket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
